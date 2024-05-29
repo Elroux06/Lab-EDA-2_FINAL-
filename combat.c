@@ -86,8 +86,8 @@ Skill *getSkillFromPlayer(Character *player)
     for (int i = 0; i < YOUR_SKILLS; i++)
     {
         
-        
         printf("%d. %s\n", i + 1, player->skills[i]->name);
+        Sleep(100);
         printf("HP: %d, ATK: %d, DEF: %d\n",
                player->skills[i]->hpmodifier,
                player->skills[i]->atkmodifier,
@@ -98,6 +98,7 @@ Skill *getSkillFromPlayer(Character *player)
             
             
             printf("Type: Temporary modifier\n");
+            Sleep(100);
             printf("rounds: %d \n",player->skills[i]->duration);
            
         }
@@ -105,13 +106,17 @@ Skill *getSkillFromPlayer(Character *player)
         {
             
             printf("Type: Direct attack\n");
+            Sleep(100);
             printf("rounds: %d \n",player->skills[i]->duration);
+            Sleep(100);
+
            
         }
         // print separator only if it's not the last skill
         if (i != MAX_SKILLS - 1)
         {
             printf("------------------------------------------------\n");
+            Sleep(100);
         }
     }
     do // continue asking until the user enters a valid skill number
@@ -162,7 +167,9 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
 
             printf("\n========= Player's turn ========\n");
             // print name of the player in the character
+            Sleep(100);
             printf("Go  %s!!!! it's your turn!\n", player->name);
+            Sleep(100);
             Skill *chosen_skill = getSkillFromPlayer(player);
 
             if (chosen_skill->type == MULTIPLE_ROUND_MODIFIER) // if the skill is a temporary modifier
@@ -226,13 +233,14 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
             
             printf("\n======== Enemy's turn ==========\n");
             // Randomly select a skill from the 10th and the 19th position in the array of available skills
+            Sleep(100);
             // as we store the skills of the enemies from index 9
             int skillIndex = rand() % 9 + 8;// Random number between 8 and 16
 
             Skill *skill = &skills[skillIndex];
 
             printf("%s used skill: %s\n",enemy->name,skill->name);
-            
+            Sleep(100);
            
                 // we modify the player's stats directly
             if (skill->atkmodifier == 0)
@@ -274,10 +282,15 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
         // print stats after the turn
        
         printf("Turn ended!. These are the stats after the turn:\n");
+        Sleep(100);
         printf("Player's stats:\n");
+        Sleep(100);
         printf("HP: %d, ATK: %d, DEF: %d\n", player->hp, player->atk, player->def);
+        Sleep(100);
         printf("Enemy's stats:\n");
+        Sleep(100);
         printf("HP: %d, ATK: %d, DEF: %d\n", enemy->hp, enemy->atk, enemy->def);
+        Sleep(100);
         
        if (player->hp <= 0)
        {
