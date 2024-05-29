@@ -15,7 +15,7 @@ An RPG turn-based, influenced in UPF students life-style.
 What type of functionalities do you wish to add to your game:
 
 
-What are strengths and weaknesses of the team members?
+What are strengths and weaknesses of the team members? \n
 Alan is good at maths and graphs, so he is good at theory but not at implementing the code.
 Edu is better at coding but lacks the theory part.
 Oriol is good in general problem-solving and expressing ideas, but lacks backround sometimes.
