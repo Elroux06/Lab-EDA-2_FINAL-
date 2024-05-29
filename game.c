@@ -139,11 +139,6 @@ void Game(Character *character, Scenario *scenarios[MAX_SCENARIOS], Skill *skill
 
 }
 
-void tutorial(){
-    printf("Tutorial");
-    return;
-}
-
 void introduction_narrative(Character *character){
     printf("You are a new student from UPF, the main objective is to pass the final exam that you will have in 3 weeks,to be able to arrive at the exam\nyou will first have to reach  30 academic credits.You will earn those credits by defeating you enemies. Good luck in your journey!!\n");
     
