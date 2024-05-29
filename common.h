@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <time.h>
+#include <windows.h> //for Sleep()
 
 // for time (); rand() and srand()
 #include <time.h> 
