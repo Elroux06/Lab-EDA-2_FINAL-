@@ -143,19 +143,14 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
 
     // Randomly choose the order of turns. In this queue we will store the turns of the player and the enemy
     // we enqueue the player and the enemy in a random order
-    for (int i = 0; i < MAX_TURNS; i++)
-    {
-        if (rand() % 2 == 0)
 
-        { // 50% chance
-            enqueue(queue, player);
-            
-        }
-        else
-        {
-            enqueue(queue, enemy);
-            
-        }
+    if (rand() % 2 == 0)
+    { // 50% chance
+        enqueue(queue, player);            
+    }
+    else
+    {
+        enqueue(queue, enemy);  
     }
 
     // Main combat loop. We traverse the queue and dequeue the player and the enemy turns
@@ -226,7 +221,7 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
 
                 }
             }
-            
+            enqueue(queue, enemy);     
         }
         else // ----------------------- TURN OF THE ENEMY
         {
@@ -277,7 +272,7 @@ bool combat(Character *player, Enemy *enemy, Skill *skills)
 
             }
             
-            
+        enqueue(queue, player);      
         }
         // print stats after the turn
        
