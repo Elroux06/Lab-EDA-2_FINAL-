@@ -11,15 +11,7 @@
 
 
 
-void waitForKey()
-{
-    int c;
-    printf("Press Enter to continue...");
-    do
-    {
-        c = getchar();
-    } while (c != '\n' && c != EOF);
-}
+
 
 
 
