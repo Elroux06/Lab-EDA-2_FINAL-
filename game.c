@@ -4,6 +4,7 @@
 #include "scenarios.c"
 #include "skills.c"
 #include "character.c"
+#include "tutorial.c"
 
 
 
